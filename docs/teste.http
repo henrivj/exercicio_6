@@ -1,0 +1,44 @@
+### Health Check
+GET http://localhost:3000/
+
+### CADASTRAR FUNCIONARIO
+POST http://localhost:3000/funcionario
+Content-Type: application/json
+
+{
+    "nome": "teste",
+    "email": "teste",
+    "senha": "teste"
+}
+
+### LOGIN FUNCIONÁRIO
+# @name login
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email": "teste",
+    "senha": "teste"
+}
+
+### CADASTRAR FORNECEDOR
+POST http://localhost:3000/fornecedor
+Content-Type: application/json
+Authorization: {{login.response.body.$.token}}
+
+{
+    "nome": "teste",
+    "cpf": "123123123123",
+    "cnpj": "1231231231230001"
+}
+
+### CONSULTAR FORNECEDOR ID
+GET http://localhost:3000/fornecedor/1
+Content-Type: application/json
+Authorization: {{login.response.body.$.token}}
+
+### CONSULTAR FORNECEDOR NOME
+GET http://localhost:3000/fornecedor?nome=
+Content-Type: application/json
+Authorization: {{login.response.body.$.token}}
+

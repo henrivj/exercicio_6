@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="../index.css" />
+		<script src="../js/cadastrarFuncionario.js" defer></script>
+
+		<title>Document</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<a href="../index.html">Home</a>
+				<div>
+					<select onchange="window.location = this.value">
+						<option disabled selected>Funcionario</option>
+						<option value="./cadastrarFuncionario.html">Cadastrar</option>
+						<option value="./login.html">Login</option>
+					</select>
+					<select onchange="window.location = this.value">
+						<option disabled selected>Fornecedor</option>
+						<option value="./cadastrarFornecedor.html">Cadastrar</option>
+						<option value="./consultarFornecedor.html">Consultar</option>
+					</select>
+				</div>
+			</nav>
+		</header>
+		<main>
+			<h1>Cadastrar Funcionário</h1>
+			<form>
+				<label for="nome">Nome</label>
+				<input required type="text" name="nome" id="inputNome" />
+				<label for="email">Email</label>
+				<input required type="text" name="email" id="inputEmail" />
+				<label for="senha">Senha</label>
+				<input required type="text" name="senha" id="inputSenha" />
+				<button type="submit">Cadastrar</button>
+			</form>
+			<p id="res"></p>
+		</main>
+	</body>
+</html>

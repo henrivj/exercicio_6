@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="./index.css" />
+		<script src="./index.js" defer></script>
+
+		<title>Document</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<a href="./index.html">Home</a>
+				<div>
+					<select onchange="window.location = this.value">
+						<option disabled selected>Funcionario</option>
+						<option value="./html/cadastrarFuncionario.html">Cadastrar</option>
+						<option value="./html/login.html">Login</option>
+					</select>
+					<select onchange="window.location = this.value">
+						<option disabled selected>Fornecedor</option>
+						<option value="./html/cadastrarFornecedor.html">Cadastrar</option>
+						<option value="./html/consultarFornecedor.html">Consultar</option>
+					</select>
+				</div>
+			</nav>
+		</header>
+		<main>
+			<h1>Sistema de Logistica</h1>
+
+			<div id="bemVindo">
+				<h1>Bem vindo, <span id="nomeUsuario"></span></h1>
+				<button id="btnLogout">Logout</button>
+			</div>
+		</main>
+	</body>
+</html>
